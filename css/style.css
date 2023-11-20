@@ -275,8 +275,9 @@ aside p {
     #sns .warpper {
         flex-direction: column;
     }
-    .location-info,
-    .location-map,
+    .location-info {
+        width: 100%;
+    }
     .sns-box {
         width: 100%;
     }
