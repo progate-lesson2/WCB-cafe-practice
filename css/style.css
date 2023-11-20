@@ -348,11 +348,11 @@ iframe {
         margin-left: 80px;
     }
     article {
-        width: 60%;
+        width: 100%;
         order: 2;
     }
     aside {
-        width: 22%;
+        width: 100%;
         order: 3;
     }
     .ad {
