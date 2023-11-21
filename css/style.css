@@ -92,6 +92,7 @@ img {
 #news .page-title {
     text-align: center;
 }
+
 /*フッター */
 footer {
     background: #432;
@@ -102,6 +103,7 @@ footer p {
     color: #fff;
     font-size: 0.875rem;
 }
+/*NEWS*/
 article {
     width: 60%;
     order: 2;
@@ -113,6 +115,7 @@ aside {
 .ad {
     order: 1;
 }
+
 .news-contents {
     display: flex;
     justify-content: space-between;
@@ -182,12 +185,123 @@ aside p {
 .sub-menu a:hover {
     color: #0bd;
 }
+
+/*MENU */
+#menu {
+    background-image: url(/images/menu-bg.jpg);
+    min-height: 100vh;
+}
+.menu-content {
+    max-width: 560px;
+    margin-top: 10%;
+}
+.menu-content .page-title {
+    text-align: center;
+}
+.nenu-content p {
+    font-size: 1.123rem;
+    margin: 10px 0 0;
+}
+.grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+.big-box {
+    grid-column: 1 / 2;
+    grid-row:  1/ 2;
+}
+.big-box img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.grid .item img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*CONTACT */
+#contact {
+    background-image: url(/images/contact-bg.jpg);
+    min-height:  100vh;
+}
+form div {
+    margin-bottom: 14px;
+}
+label {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+    color: #432;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(255,255,255,.5);
+    border: 1px #fff solid;
+    border-radius:  5px;
+    padding: 10px;
+    font-size:  1rem;
+}
+input[type="text"],
+input[type="email"]{
+    width: 100%;
+    max-width:  240px;
+}
+textarea {
+    width: 100%;
+    max-width: 480px;
+    height: 6rem;
+}
+input[type="submit"]{
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+#location {
+    padding: 4% 0;
+}
+#location .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.location-info {
+    width: 22%;
+    color: #fff;
+}
+.location-info p {
+    padding: 12px 10px;
+}
+.location-map {
+    width: 74%;
+}
+iframe {
+    width: 100%;
+}
+#sns {
+    background: #FAF7F0;
+    padding: 4% 0;
+}
+#sns .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#sns .sub-title {
+    margin-bottom: 30px;
+}
+.sns-box {
+    width: 30%;
+}
+
 /*モバイル版 */
 @media (max-width:600px) {
     .page-title {
         font-size: 2.5rem;
     }
-
     .main-nav {
         font-size: 1rem;
         margin-top: 10px;
@@ -204,15 +318,22 @@ aside p {
     }
     .news-contents {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
     article,
     aside {
         width: 100%;
     }
+    
+    .ad img {
+        display: none;
+    }
     #news .page-title {
         margin-top: 30px;
     }
     aside {
+        
         margin-top: 60px;
     }
     .post-info {
@@ -249,147 +370,39 @@ aside p {
     .ad {
         order: 1;
     }
-    .ad img {
-        display: none;
-    }
 
     .menu-content {
         margin-top: 20%;
     }
     .big-box {
+        display:;
         grid-column: auto;
         grid-row: auto;
     }
     .big-box img {
         height: auto;
     }
-    #contact .page-title{
+    /*CONTACT*/
+    #contact .page-title {
         margin-top: 40px;
     }
+    /*form*/
     input[type="text"],
-    input[yype="email"],
+    input[type="email"],
     textarea {
         max-width: 100%;
     }
-    #location .wrapper,
-    #sns .warpper {
+    /*店舗情報・地図・SNS*/
+    #lication .wrapper,
+    #sns .wrapper {
+        display: block;
         flex-direction: column;
     }
-    .location-info {
-        width: 100%;
-    }
+    .location-info,
+    .location-map,
     .sns-box {
         width: 100%;
+        display: block;
+        flex-direction: column;
     }
-    .snd-box {
-        margin-bottom: 30px;
-    }
-    }
-/*MENU */
-#menu {
-    background-image: url(../images/menu-bg.jpg);
-    min-height: 100vh;
-}
-.menu-content {
-    max-width: 560px;
-    margin-top: 10%;
-}
-.menu-content .page-title {
-    text-align: center;
-}
-.nenu-content p {
-    font-size: 1.123rem;
-    margin: 10px 0 0;
-}
-.grid {
-    display: grid;
-    gap: 26px;
-    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-    margin-top: 6%;
-    margin-bottom: 50px;
-}
-.big-box {
-    grid-column: 1 / 4;
-    grid-row:  1/ 3;
-}
-.big-box img {
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-}
-.grid .item img{
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-}
-
-/*CONTACT */
-#contact {
-    background-image: url(../images/contact-bg.jpg);
-    min-height:  100vh;
-}
-form div {
-    margin-bottom: 14px;
-}
-label {
-    font-size: 1.125rem;
-    margin-bottom: 10px;
-    display: block;
-}
-input[type="text"],
-input[type="email"],
-textarea {
-    background: rgba(255,255,255,.5);
-    border: 1px #fff solid;
-    border-radius:  5px;
-    padding: 10px;
-    font-size:  1rem;
-}
-input[type="text"],
-input[type="email"]{
-    width: 100%;
-    max-width:  240px;
-}
-textarea {
-    width: 100%;
-    max-width: 480px;
-    height: 6rem;
-}
-input[type="submit"]{
-    border: none;
-    cursor: pointer;
-    line-height: 1;
-}
-#location {
-    padding: 4% 0;
-}
-#location .warpper {
-    display: flex;
-    justify-content: space-between;
-} 
-.location-info {
-    width: 22%;
-}
-.location-info p {
-    padding: 12px 10px;
-}
-.location-map {
-    width: 74%;
-}
-iframe {
-    width: 100%;
-}
-#sns {
-    background: #FAF7F0;
-    padding: 4% 0;
-}
-#sns .wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-#sns .sub-title {
-    margin-bottom: 30px;
-}
-.sns-box {
-    width: 30%;
 }
