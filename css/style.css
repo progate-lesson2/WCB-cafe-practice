@@ -396,13 +396,15 @@ iframe {
     #lication .wrapper,
     #sns .wrapper {
         display: block;
+        
+    }
+    #location .wrapper {
         flex-direction: column;
+        
     }
     .location-info,
     .location-map,
     .sns-box {
         width: 100%;
-        display: block;
-        flex-direction: column;
     }
 }
